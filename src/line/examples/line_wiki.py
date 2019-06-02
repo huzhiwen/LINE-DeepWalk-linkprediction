@@ -1,14 +1,15 @@
 
 import numpy as np
-
+import sys
+sys.path.append('../')
 from ge.classify import read_node_label, Classifier
 from ge import LINE
 from sklearn.linear_model import LogisticRegression
-
+import matplotlib
+matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import networkx as nx
 from sklearn.manifold import TSNE
-
 
 def evaluate_embeddings(embeddings):
     X, Y = read_node_label('../data/wiki/friend_labels_baseline.txt')
