@@ -46,7 +46,7 @@ if __name__ == "__main__":
                          create_using=nx.DiGraph(), nodetype=None, data=[('weight', int)])
 
     model = LINE(G, embedding_size=64, order='second')
-    model.train(batch_size=1024, epochs=1, verbose=2)
+    model.train(batch_size=1024, epochs=30, verbose=2)
     embeddings = model.get_embeddings()
     # print(len(embeddings))
     # print(embeddings)
